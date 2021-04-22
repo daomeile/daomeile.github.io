@@ -257,9 +257,20 @@
          <!--Table of Contents begin-->
   
   <!--Table of Contents end -->
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="我的Hexo搭建历程"><a href="#我的Hexo搭建历程" class="headerlink" title="我的Hexo搭建历程"></a>我的Hexo搭建历程</h2><p>1、下载nodejs环境 网站搜索 nodejs.org<br>2、npm install -g cnpm –registry-<a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="Hexo搭建"><a href="#Hexo搭建" class="headerlink" title="Hexo搭建"></a>Hexo搭建</h1><h2 id="创建Hexo运行环境"><a href="#创建Hexo运行环境" class="headerlink" title="创建Hexo运行环境"></a>创建Hexo运行环境</h2><ul>
+<li>Hexo基于nodejs环境 在浏览器输入<code>nodejs.org</code>下载最新版本的的nodejs环境</li>
+<li>完成之后在在命令行中输入<code>npm -v</code>检查是否安装成功</li>
+<li>继续输入命令<code>npm install -g cnpm --registry-https://registry.npm.taobao.org</code></li>
+<li>命令行输入<code>cnpm -v</code>检查是否安装成功</li>
+<li>输入<code>cnpm install -g hexo-cli</code>安装Hexo</li>
+<li>最后命令行输入<code>hexo</code>检查是否均安装成功</li>
+</ul>
+<h2 id="开始创建Hexo博客"><a href="#开始创建Hexo博客" class="headerlink" title="开始创建Hexo博客"></a>开始创建Hexo博客</h2><ul>
+<li>命令行输入<code>hexo init</code> &ensp;&ensp;此处如果遇到git错误需要安装<a target="_blank" rel="noopener" href="https://git-scm.com/download" title="点击安装">git</a></li>
+<li>命令行输入<code>cnpm install --save hexo-deployer-git</code>&ensp; 安装git插件，如果遇到无法访问github情况，建议切换网络</li>
+<li>建立一个Blog文件夹（以后的一切命令均在该文件夹中运行，win用户建议使用cmder）<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
