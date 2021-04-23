@@ -320,6 +320,25 @@ merge = refs/heads/master
 <li>注意一点 需要<code>hexo clean</code> 和<code>hexo g</code>重新生成然后启动服务器</li>
 <li>添加tags与之相同</li>
 <li>最后在Yilia文件夹中的config文件中修改menu 设置tags和categories标签</li>
+<li>给单个文章添加目录，在config.yml文件中加入<br>  jsonContent:<pre><code>  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true
+</code></pre>
+</li>
 </ul>
 
       
