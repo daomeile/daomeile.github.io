@@ -57,7 +57,7 @@
 	        
 				<li><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
 	        
-				<li><a href="/categories/%E5%88%86%E7%B1%BB/">分类</a></li>
+				<li><a href="/categories/Stm32/">分类</a></li>
 	        
 			</ul>
 		</nav>
@@ -141,7 +141,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/%E5%88%86%E7%B1%BB/">分类</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories/Stm32/">分类</a></li>
 		        
 				</ul>
 			</nav>
@@ -195,7 +195,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        			<a href="/categories/Stm32//" class="article-tag-list-link color1">Stm32</a>
         		</li>
       		
 		</ul>
@@ -241,7 +241,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/22/hello-world/">Hexo Hello World</a>
+      <a class="article-title" href="/2021/04/22/hello-world/">Hello Hexo</a>
     </h1>
   
 
@@ -257,7 +257,8 @@
          <!--Table of Contents begin-->
   
   <!--Table of Contents end -->
-        <h1 id="Hexo搭建"><a href="#Hexo搭建" class="headerlink" title="Hexo搭建"></a>Hexo搭建</h1><h2 id="创建Hexo运行环境"><a href="#创建Hexo运行环境" class="headerlink" title="创建Hexo运行环境"></a>创建Hexo运行环境</h2><ul>
+        <h1 id="Hexo搭建"><a href="#Hexo搭建" class="headerlink" title="Hexo搭建"></a>Hexo搭建</h1><p>如果大家有兴趣搭建Hexo博客可以参考这篇文章，本篇文章基于Windows系统，避坑必看。</p>
+<h2 id="创建Hexo运行环境"><a href="#创建Hexo运行环境" class="headerlink" title="创建Hexo运行环境"></a>创建Hexo运行环境</h2><ul>
 <li>Hexo基于nodejs环境 在浏览器输入<code>nodejs.org</code>下载最新版本的的nodejs环境</li>
 <li>完成之后在在命令行中输入<code>npm -v</code>检查是否安装成功</li>
 <li>继续输入命令<code>npm install -g cnpm --registry-https://registry.npm.taobao.org</code></li>
@@ -268,20 +269,58 @@
 <h2 id="开始创建Hexo博客"><a href="#开始创建Hexo博客" class="headerlink" title="开始创建Hexo博客"></a>开始创建Hexo博客</h2><ul>
 <li>命令行输入<code>hexo init</code> &ensp;&ensp;此处如果遇到git错误需要安装<a target="_blank" rel="noopener" href="https://git-scm.com/download" title="点击安装">git</a></li>
 <li>命令行输入<code>cnpm install --save hexo-deployer-git</code>&ensp; 安装git插件，如果遇到无法访问github情况，建议切换网络</li>
-<li>建立一个Blog文件夹（以后的一切命令均在该文件夹中运行，win用户建议使用cmder）<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3></li>
+<li>建立一个Blog文件夹（以后的一切命令均在该文件夹中运行，win用户建议使用cmder）</li>
+<li>在命令行中输入<code>hexo init</code>创建工程，在目录<code>Blog\source\_posts</code>下有<code>hello-world.md</code>文件，该文件类似于编程hello world，是一个标志性的开始文件。</li>
+<li>命令行输入<code>hexo g</code>生产静态网页，再输入<code>hexo s</code>，浏览器输入<code>localhost:4000</code>便可以看到一个欢迎网页。</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>到此处hexo配置完成，下面讲讲hexo一些常用的命令：</p>
+<pre><code>hexo clean ：清除缓存文件
+hexo g       ：生成静态网页
+hexo s       ：启动服务器
+hexo d       ：推送（下面会讲如何将该静态网页推送到GitHub中）
+</code></pre>
+<h2 id="将博客推送到GitHub"><a href="#将博客推送到GitHub" class="headerlink" title="将博客推送到GitHub"></a>将博客推送到GitHub</h2><p>由于<code>hexo s</code>依赖于本地服务器，如果要分享给别人（写博客肯定以分享为主）就需要将博客推到服务器中，作为学生党，我优选GitHub。</p>
+<ul>
+<li>注册Github账号（起名字最好为常用名） 然后点击新建repository</li>
+<li>将Repository Name 命名为(个人用户名).github.io 例如daomeile.github.io</li>
+<li>在Blog目录下编辑config.yml文件,在文件中加入</li>
+</ul>
+<p><code>type: git</code></p>
+<p><code>repo: https://github.com/daomeile/daomeile.github.io.git #此处为自己的github仓库地址</code></p>
+<p> <code>branch: master</code></p>
+<ul>
+<li>命令输入<code>hexo d</code>即可以推送到github中 </li>
+<li>在浏览器输入自己命名的repository名例如<code>daomeile.github.io</code>即可看到效果</li>
+</ul>
+<p>在此处如果出现github用户名错误的，查看Blog隐藏文件夹下的<code>Blog\.deploy_git\.git\config</code>文件，将此文件修改为：</p>
+<pre><code>[user]
+email=username@qq.com        ##个人邮箱账户
+name=daomeile            ##个人用户名
+[core]
+repositoryformatversion = 0
+filemode = false
+bare = false
+logallrefupdates = true
+symlinks = false
+ignorecase = true
+[branch &quot;master&quot;]
+remote = https://github.com/daomeile/daomeile.github.io.git    ##daomeile换成自己的ID
+merge = refs/heads/master
+</code></pre>
+<h2 id="切换Yilia主题"><a href="#切换Yilia主题" class="headerlink" title="切换Yilia主题"></a>切换Yilia主题</h2><p><a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia" title="点击访问Yilia的网站">Yilia</a></p>
+<ul>
+<li>命令行输入<code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code></li>
+<li>在<code>Blog/_config.yml</code>文件中，将theme换成yilia </li>
+</ul>
+<h2 id="Bolg-sources-为博客本地文件，修改或者添加即可"><a href="#Bolg-sources-为博客本地文件，修改或者添加即可" class="headerlink" title="/Bolg/sources/为博客本地文件，修改或者添加即可"></a>/Bolg/sources/为博客本地文件，修改或者添加即可</h2><p>此时修改的config文件为yilia目录下的config文件</p>
+<h2 id="下面介绍如果给博客添加目录和分类"><a href="#下面介绍如果给博客添加目录和分类" class="headerlink" title="下面介绍如果给博客添加目录和分类"></a>下面介绍如果给博客添加目录和分类</h2><ul>
+<li>命令行输入<code>hexo new page categories</code> </li>
+<li>在source文件夹中找到categories目录下的index.md文件，添加<code>tpye: categories</code></li>
+<li>在需要分类的文章开头添加<code>categories: Hexo</code>即可</li>
+<li>注意一点 需要<code>hexo clean</code> 和<code>hexo g</code>重新生成然后启动服务器</li>
+<li>添加tags与之相同</li>
+<li>最后在Yilia文件夹中的config文件中修改menu 设置tags和categories标签</li>
+</ul>
 
       
 
@@ -290,6 +329,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">搭建博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -426,6 +476,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
