@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Stm32学习 | Hexo</title>
+  <title>Stm32环境搭建 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Stm32与CbuMax学习之路">
+  <meta name="description" content="CubMax安装CubMax Visual Studio安装 在网上下载Visual studio 2019社区版 安装过程中选择C++桌面开发 使用C++的Linux开发，选中右边的嵌入式loT开发工具 下载VisualGDB环境 VisualGDB(已破解) 将两者关联 运行CubMax软件，新建工程选择芯片类型，在Project Manager中设置IDE 打开Visual studio 软">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Stm32学习">
+<meta property="og:title" content="Stm32环境搭建">
 <meta property="og:url" content="http://example.com/2021/04/22/Stm32Study/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Stm32与CbuMax学习之路">
+<meta property="og:description" content="CubMax安装CubMax Visual Studio安装 在网上下载Visual studio 2019社区版 安装过程中选择C++桌面开发 使用C++的Linux开发，选中右边的嵌入式loT开发工具 下载VisualGDB环境 VisualGDB(已破解) 将两者关联 运行CubMax软件，新建工程选择芯片类型，在Project Manager中设置IDE 打开Visual studio 软">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-04-22T04:12:57.000Z">
-<meta property="article:modified_time" content="2021-04-23T01:38:09.548Z">
+<meta property="article:modified_time" content="2021-04-23T13:32:59.910Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="环境搭建">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -61,7 +62,7 @@
 	        
 				<li><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
 	        
-				<li><a href="/categories/Stm32/">分类</a></li>
+				<li><a href="/categories/Stm32">Stm32</a></li>
 	        
 			</ul>
 		</nav>
@@ -145,7 +146,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories/Stm32/">分类</a></li>
+					<li style="width: 33.333333333333336%"><a href="/categories/Stm32">Stm32</a></li>
 		        
 				</ul>
 			</nav>
@@ -167,7 +168,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Stm32学习
+      Stm32环境搭建
     </h1>
   
 
@@ -186,12 +187,21 @@
       <strong class="toc-title">目录</strong>
       <a class="js-toggle-toc" href="javascript:void(0)"></a>
       <div class="toc-content">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Stm32%E4%B8%8ECbuMax%E5%AD%A6%E4%B9%A0%E4%B9%8B%E8%B7%AF"><span class="toc-number">1.</span> <span class="toc-text">Stm32与CbuMax学习之路</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CubMax%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">CubMax安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Visual-Studio%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">Visual Studio安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%86%E4%B8%A4%E8%80%85%E5%85%B3%E8%81%94"><span class="toc-number">3.</span> <span class="toc-text">将两者关联</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A4%E5%A4%84%E6%B7%BB%E5%8A%A0MDK5%E8%BD%AF%E4%BB%B6%E8%B5%84%E6%BA%90"><span class="toc-number">4.</span> <span class="toc-text">此处添加MDK5软件资源</span></a></li></ol>
       </div>
     </div>
   
   <!--Table of Contents end -->
-        <h1 id="Stm32与CbuMax学习之路"><a href="#Stm32与CbuMax学习之路" class="headerlink" title="Stm32与CbuMax学习之路"></a>Stm32与CbuMax学习之路</h1>
+        <h1 id="CubMax安装"><a href="#CubMax安装" class="headerlink" title="CubMax安装"></a>CubMax安装</h1><p><a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:u:/g/personal/zhoutonglin_a1_free365_org/EUJSkE1Q77pOuHhB2PUJkiYB37F6sRkv7sQmm59BjxvrgA?e=PnFTSV" title="点击下载安装">CubMax</a></p>
+<h1 id="Visual-Studio安装"><a href="#Visual-Studio安装" class="headerlink" title="Visual Studio安装"></a>Visual Studio安装</h1><ul>
+<li>在网上下载Visual studio 2019社区版 安装过程中选择C++桌面开发 使用C++的Linux开发，选中右边的嵌入式loT开发工具</li>
+<li>下载VisualGDB环境 <a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:u:/g/personal/zhoutonglin_a1_free365_org/EX-8oZMFfLpNtkqFz2M7OIUBEBcNNcUROd087cxmXz475A?e=v0sJBo">VisualGDB</a>(已破解) <h1 id="将两者关联"><a href="#将两者关联" class="headerlink" title="将两者关联"></a>将两者关联</h1></li>
+<li>运行CubMax软件，新建工程选择芯片类型，在Project Manager中设置IDE</li>
+<li>打开Visual studio 软件新建 Embedded Project Wizard 工程，导入即可</li>
+</ul>
+<h1 id="此处添加MDK5软件资源"><a href="#此处添加MDK5软件资源" class="headerlink" title="此处添加MDK5软件资源"></a>此处添加MDK5软件资源</h1><p><a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:f:/g/personal/zhoutonglin_a1_free365_org/EkIeRl4e9KlIgeZvz7Yc8IsB5m3Xm0OI2c0yoqhsJymFbg?e=AmBmGW">MDK5</a></p>
+<p><a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:u:/g/personal/zhoutonglin_a1_free365_org/EYWQLqQaSM1PmJ54A_rhcbUBFtf-3_r8x6gqexfHmu7DSA?e=GNcfz8">J-link驱动</a></p>
+
       
 
       
@@ -199,6 +209,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境搭建</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
@@ -402,7 +423,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
+                <a href="javascript:void(0)" class="js-tag color5">环境搭建</a>
               </li>
             
             <div class="clearfix"></div>
