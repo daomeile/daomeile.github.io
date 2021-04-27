@@ -83,9 +83,9 @@
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="weixin" target="_blank" href="#" title="weixin"><i class="icon-weixin"></i></a>
 		        
 			</div>
 		</nav>
@@ -126,9 +126,9 @@
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="qq" target="_blank" href="#" title="qq"><i class="icon-qq"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="weixin" target="_blank" href="#" title="weixin"><i class="icon-weixin"></i></a>
 			        
 				</div>
 			</nav>
@@ -181,7 +181,53 @@
          <!--Table of Contents begin-->
   
   <!--Table of Contents end -->
-        
+        <h1 id="设置按键中断"><a href="#设置按键中断" class="headerlink" title="设置按键中断"></a>设置按键中断</h1><p>实现目标：按一下按键实现Led灯反转，在流水灯的基础上加上按键中断。</p>
+<p>设置按键为外部中断，设置上拉和下降沿触发<br><img src="/2021/04/23/Stm32%E4%B8%AD%E6%96%AD/1.png"></p>
+<h1 id="设置中断向量表"><a href="#设置中断向量表" class="headerlink" title="设置中断向量表"></a>设置中断向量表</h1><p>使能中断向量表，中断向量数字越小优先级越高<br><img src="/2021/04/23/Stm32%E4%B8%AD%E6%96%AD/2.png"></p>
+<h2 id="抢占优先级和响应优先级"><a href="#抢占优先级和响应优先级" class="headerlink" title="抢占优先级和响应优先级"></a>抢占优先级和响应优先级</h2><p>STM32 的中断向量具有两个属性，一个为抢占属性，另一个为响应属性，其属性编号越小，表明它的优先级别越高。<br>抢占，是指打断其他中断的属性，即因为具有这个属性会出现嵌套中断（比如在B执行时，A的抢占优先级高则执行A中断，执行完之后再继续执行B）。而响应属性则应用在抢占属性相同的情况下，当两个中断向量的抢占优先级相同时，如果两个中断同时到达， 则先处理响应优先级高的中断。</p>
+<table>
+<thead>
+<tr>
+<th align="center">中断向量</th>
+<th align="center">抢占优先级</th>
+<th align="center">响应优先级</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">A</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">B</td>
+<td align="center">1</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">1</td>
+<td align="center">1</td>
+</tr>
+</tbody></table>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>高优先级的抢占优先级是可以打断正在进行的低抢占优先级中断的。</li>
+<li>抢占优先级相同的中断，高响应优先级不可以打断低响应优先级的中断。</li>
+<li>抢占优先级相同的中断，当两个中断同时发生的情况下，哪个响应优先级高，哪个先执行。</li>
+<li>如果两个中断的抢占优先级和响应优先级都是一样的话，则看哪个中断先发生就先执行；</li>
+</ul>
+<h1 id="设置中断回调函数"><a href="#设置中断回调函数" class="headerlink" title="设置中断回调函数"></a>设置中断回调函数</h1><p>在HAL库中，中断执行靠函数</p>
+<pre><code>_weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+</code></pre>
+<p>由于该函数为弱函数，在主函数中可以重写该函数</p>
+<pre><code>/* USER CODE BEGIN 4 */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+&#123;
+if (GPIO_Pin == GPIO_PIN_5)
+    HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_2);
+ &#125;
+/* USER CODE END 4 */
+</code></pre>
+<h1 id="调试下载验证"><a href="#调试下载验证" class="headerlink" title="调试下载验证"></a>调试下载验证</h1>
       
 
       
@@ -189,7 +235,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Stm32//" class="article-tag-list-link color1">Stm32</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
