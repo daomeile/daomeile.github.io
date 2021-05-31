@@ -181,8 +181,9 @@
          <!--Table of Contents begin-->
   
   <!--Table of Contents end -->
-        <p>#PWM实现呼吸灯<br>我自己用的是正点原子的Mini板，PA8口接定时器1的通道1和LED灯。<br>##设置PA8口<br><img src="/2021/05/31/PWM%E5%91%BC%E5%90%B8%E7%81%AF/%E5%BC%95%E8%84%9A%E8%AE%BE%E7%BD%AE.png"><br>##设置定时器</p>
-<p><img src="/2021/05/31/PWM%E5%91%BC%E5%90%B8%E7%81%AF/%E5%AE%9A%E6%97%B6%E5%99%A8%E8%AE%BE%E8%AE%A1.png"></p>
+        <h1 id="PWM实现呼吸灯"><a href="#PWM实现呼吸灯" class="headerlink" title="PWM实现呼吸灯"></a>PWM实现呼吸灯</h1><p>我自己用的是正点原子的Mini板，PA8口接定时器1的通道1和LED灯。</p>
+<h2 id="设置PA8口"><a href="#设置PA8口" class="headerlink" title="设置PA8口"></a>设置PA8口</h2><p><img src="/2021/05/31/PWM%E5%91%BC%E5%90%B8%E7%81%AF/%E5%BC%95%E8%84%9A%E8%AE%BE%E7%BD%AE.png"></p>
+<h2 id="设置定时器"><a href="#设置定时器" class="headerlink" title="设置定时器"></a>设置定时器</h2><p><img src="/2021/05/31/PWM%E5%91%BC%E5%90%B8%E7%81%AF/%E5%AE%9A%E6%97%B6%E5%99%A8%E8%AE%BE%E7%BD%AE.png"></p>
 <p>在设置完定时器之后，需要对预分频数进行设置。<br>预分频系数和计数值的计算方法为总频率/(预分频系数+1)(重装载值+1)</p>
 <p><img src="/2021/05/31/PWM%E5%91%BC%E5%90%B8%E7%81%AF/%E5%88%86%E9%A2%91%E8%AE%BE%E7%BD%AE.png"></p>
 <p>下面对主函数进行添加</p>
@@ -622,6 +623,95 @@ if (GPIO_Pin == GPIO_PIN_5)
 
 
   
+    <article id="post-Stm32环境搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">Stm32环境搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+  	<time datetime="2021-04-22T04:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+         <!--Table of Contents begin-->
+  
+  <!--Table of Contents end -->
+        <h1 id="CubMax安装"><a href="#CubMax安装" class="headerlink" title="CubMax安装"></a>CubMax安装</h1><h2 id="CubMax是一款ST公司的免费软件，点击CubMax下载安装"><a href="#CubMax是一款ST公司的免费软件，点击CubMax下载安装" class="headerlink" title="CubMax是一款ST公司的免费软件，点击CubMax下载安装"></a>CubMax是一款ST公司的免费软件，点击<a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:u:/g/personal/zhoutonglin_a1_free365_org/EUJSkE1Q77pOuHhB2PUJkiYB37F6sRkv7sQmm59BjxvrgA?e=PnFTSV" title="点击下载安装">CubMax</a>下载安装</h2><h1 id="Visual-Studio安装"><a href="#Visual-Studio安装" class="headerlink" title="Visual Studio安装"></a>Visual Studio安装</h1><h2 id="在网上下载Visual-studio-2019社区版"><a href="#在网上下载Visual-studio-2019社区版" class="headerlink" title="在网上下载Visual studio 2019社区版"></a><strong>在网上下载<a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/zh-hans/">Visual studio 2019社区版</a></strong></h2><h2 id="安装过程中选择C-桌面开发"><a href="#安装过程中选择C-桌面开发" class="headerlink" title="安装过程中选择C++桌面开发"></a><strong>安装过程中选择C++桌面开发</strong></h2><p><img src="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/start_1.png"></p>
+<h2 id="使用C-的Linux开发，选中右边的嵌入式loT开发工具"><a href="#使用C-的Linux开发，选中右边的嵌入式loT开发工具" class="headerlink" title="使用C++的Linux开发，选中右边的嵌入式loT开发工具"></a><strong>使用C++的Linux开发，选中右边的嵌入式loT开发工具</strong></h2><p><img src="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/start_2.png"></p>
+<h2 id="下载-VisualGDB-已破解"><a href="#下载-VisualGDB-已破解" class="headerlink" title="下载 VisualGDB(已破解)"></a><strong>下载 <a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:u:/g/personal/zhoutonglin_a1_free365_org/EX-8oZMFfLpNtkqFz2M7OIUBEBcNNcUROd087cxmXz475A?e=v0sJBo">VisualGDB</a>(已破解)</strong></h2><h1 id="MDK5安装"><a href="#MDK5安装" class="headerlink" title="MDK5安装"></a>MDK5安装</h1><h2 id="下载MDK5-破解什么的就不多说了"><a href="#下载MDK5-破解什么的就不多说了" class="headerlink" title="下载MDK5(破解什么的就不多说了)"></a>下载<a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:f:/g/personal/zhoutonglin_a1_free365_org/EkIeRl4e9KlIgeZvz7Yc8IsB5m3Xm0OI2c0yoqhsJymFbg?e=AmBmGW">MDK5</a>(破解什么的就不多说了)</h2><h2 id="下载J-link驱动-我用的是segger小黑盒，搁淘宝买找商家要"><a href="#下载J-link驱动-我用的是segger小黑盒，搁淘宝买找商家要" class="headerlink" title="下载J-link驱动(我用的是segger小黑盒，搁淘宝买找商家要)"></a>下载<a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:u:/g/personal/zhoutonglin_a1_free365_org/EYWQLqQaSM1PmJ54A_rhcbUBFtf-3_r8x6gqexfHmu7DSA?e=GNcfz8">J-link驱动</a>(我用的是segger小黑盒，搁淘宝买找商家要)</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境搭建</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Stm32//" class="article-tag-list-link color1">Stm32</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -767,95 +857,6 @@ merge = refs/heads/master
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2021/04/22/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Stm32环境搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">Stm32环境搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2021-04-22T04:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-         <!--Table of Contents begin-->
-  
-  <!--Table of Contents end -->
-        <h1 id="CubMax安装"><a href="#CubMax安装" class="headerlink" title="CubMax安装"></a>CubMax安装</h1><h2 id="CubMax是一款ST公司的免费软件，点击CubMax下载安装"><a href="#CubMax是一款ST公司的免费软件，点击CubMax下载安装" class="headerlink" title="CubMax是一款ST公司的免费软件，点击CubMax下载安装"></a>CubMax是一款ST公司的免费软件，点击<a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:u:/g/personal/zhoutonglin_a1_free365_org/EUJSkE1Q77pOuHhB2PUJkiYB37F6sRkv7sQmm59BjxvrgA?e=PnFTSV" title="点击下载安装">CubMax</a>下载安装</h2><h1 id="Visual-Studio安装"><a href="#Visual-Studio安装" class="headerlink" title="Visual Studio安装"></a>Visual Studio安装</h1><h2 id="在网上下载Visual-studio-2019社区版"><a href="#在网上下载Visual-studio-2019社区版" class="headerlink" title="在网上下载Visual studio 2019社区版"></a><strong>在网上下载<a target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/zh-hans/">Visual studio 2019社区版</a></strong></h2><h2 id="安装过程中选择C-桌面开发"><a href="#安装过程中选择C-桌面开发" class="headerlink" title="安装过程中选择C++桌面开发"></a><strong>安装过程中选择C++桌面开发</strong></h2><p><img src="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/start_1.png"></p>
-<h2 id="使用C-的Linux开发，选中右边的嵌入式loT开发工具"><a href="#使用C-的Linux开发，选中右边的嵌入式loT开发工具" class="headerlink" title="使用C++的Linux开发，选中右边的嵌入式loT开发工具"></a><strong>使用C++的Linux开发，选中右边的嵌入式loT开发工具</strong></h2><p><img src="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/start_2.png"></p>
-<h2 id="下载-VisualGDB-已破解"><a href="#下载-VisualGDB-已破解" class="headerlink" title="下载 VisualGDB(已破解)"></a><strong>下载 <a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:u:/g/personal/zhoutonglin_a1_free365_org/EX-8oZMFfLpNtkqFz2M7OIUBEBcNNcUROd087cxmXz475A?e=v0sJBo">VisualGDB</a>(已破解)</strong></h2><h1 id="MDK5安装"><a href="#MDK5安装" class="headerlink" title="MDK5安装"></a>MDK5安装</h1><h2 id="下载MDK5-破解什么的就不多说了"><a href="#下载MDK5-破解什么的就不多说了" class="headerlink" title="下载MDK5(破解什么的就不多说了)"></a>下载<a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:f:/g/personal/zhoutonglin_a1_free365_org/EkIeRl4e9KlIgeZvz7Yc8IsB5m3Xm0OI2c0yoqhsJymFbg?e=AmBmGW">MDK5</a>(破解什么的就不多说了)</h2><h2 id="下载J-link驱动-我用的是segger小黑盒，搁淘宝买找商家要"><a href="#下载J-link驱动-我用的是segger小黑盒，搁淘宝买找商家要" class="headerlink" title="下载J-link驱动(我用的是segger小黑盒，搁淘宝买找商家要)"></a>下载<a target="_blank" rel="noopener" href="https://vczh-my.sharepoint.com/:u:/g/personal/zhoutonglin_a1_free365_org/EYWQLqQaSM1PmJ54A_rhcbUBFtf-3_r8x6gqexfHmu7DSA?e=GNcfz8">J-link驱动</a>(我用的是segger小黑盒，搁淘宝买找商家要)</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">环境搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Stm32//" class="article-tag-list-link color1">Stm32</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/04/22/Stm32%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">展开全文 >></a>
         </p>
       
 
